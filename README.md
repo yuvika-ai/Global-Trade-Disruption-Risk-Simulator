@@ -1,32 +1,47 @@
-# Global Trade Disruption Risk Simulator
+# Executive Summary
+This section provides a brief overview of the project, its goals, and its significance in understanding global trade disruptions.
 
-## Introduction  
-This project aims to simulate the risk associated with global trade disruptions. By employing various statistical methods, we can analyze the potential impacts on trade and supply chains.
+# Technical Stack
+- Python
+- Flask
+- Pandas
+- Matplotlib
+- Seaborn
 
-## Methodology  
-We utilize Monte Carlo simulations to model the uncertainties in global trade disruptions. The simulation process involves generating random samples, calculating losses, and analyzing the results.
+# Key Features
+- Real-time data analysis
+- Interactive visualizations
+- Comprehensive risk assessment tools
 
-## Results & Visualizations  
-### 1. Supply Chain Risk Comparison with VaR 95  
-**What it shows:**  
-This graph illustrates the comparison of different supply chain risks evaluated at the 95% Value at Risk (VaR). The higher risks signify potential significant losses.  
-**Key insights or findings:**  
-The analysis reveals that certain scenarios present higher risks than others, emphasizing the need for better risk management strategies in these areas.
+# Methodology
+This section outlines the methods used to assess global trade disruption risks, including data sources and analytical techniques.
 
-### 2. Tail Risk Histogram with 95% and 99% VaR Lines  
-**What it shows:**  
-This histogram displays the distribution of tail risks, highlighting both the 95% and 99% VaR lines, which help identify extreme losses in the distribution.  
-**Key insights or findings:**  
-The data indicates that while most losses are covered within the 95% VaR, there are significant outliers that could lead to considerable impacts, illustrating the importance of considering tail risks in risk assessments.
+# Repository Structure
+- `src/`: Source code files
+- `data/`: Data files
+- `notebooks/`: Jupyter notebooks for analysis
 
-### 3. Monte Carlo Loss Distribution  
-**What it shows:**  
-This graph depicts the right-skewed distribution of losses calculated through a Monte Carlo simulation. The right skew indicates that while most trade disruptions result in low to moderate losses, a few extreme events can cause catastrophic impacts.  
-**Key insights or findings:**  
-Understanding this distribution is crucial for stakeholders as it highlights the potential for significant unexpected losses, even if they are infrequent.
+# Results & Visualizations
+## Supply Chain Risk Comparison
+### What it shows
+This graph compares the risk levels across different supply chains.
+### Key insights or findings
+It indicates which supply chains are more vulnerable and require attention.
 
-### 4. Global Trade Disruption Risk by Scenario  
-**What it shows:**  
-This visualization presents the average losses associated with various disruption scenarios. Each scenario outlines different conditions and their possible effects on trade.  
-**Key insights or findings:**  
-The results indicate that certain scenarios lead to consistently higher average losses, which can guide organizations in prioritizing their risk management resources and strategies.
+## Tail Risk (VaR Levels)
+### What it shows
+This graph illustrates the Value at Risk (VaR) for various scenarios.
+### Key insights or findings
+It helps in understanding potential losses under extreme market conditions.
+
+## Monte Carlo Loss Distribution
+### What it shows
+This graph shows the distribution of potential losses based on Monte Carlo simulations.
+### Key insights or findings
+It provides insights into the likelihood of different loss levels occurring.
+
+## Global Trade Disruption Risk by Scenario
+### What it shows
+This graph represents the risk of global trade disruptions under various hypothetical scenarios.
+### Key insights or findings
+It highlights the most impactful scenarios and their implications on global trade.
