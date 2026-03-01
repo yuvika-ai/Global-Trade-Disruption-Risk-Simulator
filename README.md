@@ -1,4 +1,3 @@
-@@ -1,24 +1,30 @@
  # Global-Trade-Disruption-Risk-Simulator
  This project models the economic impact of maritime chokepoint disruptions (e.g., Suez Canal) using Monte Carlo simulation and scenario-based risk modeling.
  Stochastic Modeling | Monte Carlo Simulations | Agentic AI (Llama 3.3)
