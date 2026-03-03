@@ -11,4 +11,4 @@ The Technical Stack Engine: Probabilistic Modeling via Monte Carlo Simulations (
 
 📈 Methodology: The "Consultant" Approach Data Ingestion: Processed UN Comtrade/Global Trade Flow datasets to establish effective daily trade exposure ($6.69B/day baseline). Stochastic Sampling: Ran 10,000 simulations using numpy to model the uncertainty of blockage duration ( ) and cost multipliers ( ). Risk Aggregation: Visualized the probability density function to highlight the Value at Risk (VaR)—the industry standard for enterprise risk management.
 
-📂 Repository Structure notebooks/: The core Google Colab logic and Monte Carlo engine. data/: Cleaned global trade datasets and disruption parameters. assets/: Professional Plotly histograms showing the Risk Distributio
+📂 Repository Structure notebooks/: The core Google Colab logic and Monte Carlo engine. data/: Cleaned global trade datasets and disruption parameters. assets/: Professional Plotly histograms showing the Risk Distribution
