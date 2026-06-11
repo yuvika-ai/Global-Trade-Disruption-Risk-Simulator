@@ -1,15 +1,147 @@
 Global-Trade-Disruption-Risk-Simulator
 This project models the economic impact of maritime chokepoint disruptions (e.g., Suez Canal) using Monte Carlo simulation and scenario-based risk modeling. Stochastic Modeling | Monte Carlo Simulations | Agentic AI (Llama 3.3)
 
-📊 Executive Summary
+Global Trade Disruption Risk Simulator
 
-In an era of increasing maritime volatility, static trade models are insufficient. This project is a Decision Intelligence Tool designed to quantify the economic impact of global chokepoint disruptions (e.g., Suez Canal, Panama Canal). By integrating Stochastic Modeling with Agentic AI, this engine moves beyond "average" forecasts to identify Tail-Risk (95th/99th Percentile)—providing actionable strategic advisory for C-suite stakeholders.
+A quantitative risk modeling framework that evaluates the financial impact of maritime trade disruptions using Monte Carlo simulation and LLM-assisted scenario analysis.
 
-The Technical Stack Engine: Probabilistic Modeling via Monte Carlo Simulations (10,000+ iterations). Logic: Stochastic Variable Mapping using Triangular and Gamma distributions for blockage duration and rerouting costs. Brain: Agentic AI Layer powered by Llama 3.3 (via Groq LPUs) for real-time strategic interpretation. Visualization: Interactive Plotly dashboards for Value at Risk (VaR) distribution.
+The project models uncertainty surrounding major global trade chokepoints such as the Suez Canal and Panama Canal, estimating potential economic losses under varying disruption conditions. A Large Language Model (Llama 3.3 via Groq) is integrated to translate simulation outputs into scenario-specific operational recommendations.
 
-🚀 Key Features Multi-Scenario Stress Testing: Toggle between 'Minor Congestion', 'Major Blockage', and 'Catastrophic Failure' states. Rerouting Economics: A dual-path logic that simulates the financial trade-off between idling vs. rerouting (e.g., Cape of Good Hope) with associated fuel and time premiums. Tail-Risk Quantification: Automatically calculates 95% VaR and 99% Worst-Case scenarios, identifying "Black Swan" events that traditional linear models miss. Agentic Strategy Layer: An AI Consultant that "reads" the simulation variance and provides sector-specific mitigation strategies (e.g., Inventory Buffer vs. Air Freight pivot).
+🚀 Project Overview
 
-📈 Methodology: The "Consultant" Approach Data Ingestion: Processed UN Comtrade/Global Trade Flow datasets to establish effective daily trade exposure ($6.69B/day baseline). Stochastic Sampling: Ran 10,000 simulations using numpy to model the uncertainty of blockage duration ( ) and cost multipliers ( ). Risk Aggregation: Visualized the probability density function to highlight the Value at Risk (VaR)—the industry standard for enterprise risk management.
+Global supply chains depend heavily on a small number of maritime chokepoints. When disruptions occur, companies face difficult decisions involving rerouting, inventory management, transportation costs, and delivery delays.
+
+Traditional forecasting methods often rely on single-point estimates that fail to capture uncertainty. This project applies probabilistic modeling techniques to generate a distribution of possible outcomes rather than a single forecast.
+
+The objective is to quantify both expected losses and extreme downside scenarios associated with supply chain disruptions.
+Methodology
+1. Trade Exposure Baseline
+
+A trade exposure model was constructed using global trade flow data to estimate daily economic activity dependent on maritime transport.
+
+Baseline trade exposure: approximately $6.69 billion per day
+Focus areas:
+Suez Canal disruptions
+Panama Canal disruptions
+Severe multi-route failures
+2. Monte Carlo Risk Simulation
+
+The core engine uses Monte Carlo simulation to model uncertainty across key variables.
+
+Variables include:
+
+Disruption duration
+Cargo rerouting costs
+Operational delays
+Alternative transport premiums
+
+A total of 10,000 simulation iterations were executed to generate a probability distribution of potential losses.
+
+Probability distributions used:
+
+Triangular Distribution
+Used for disruption duration estimates where minimum, most likely, and maximum values could be reasonably specified.
+Gamma Distribution
+Used to model highly skewed loss scenarios and extreme disruption events.
+3. Risk Quantification
+
+Simulation outputs are aggregated into a loss distribution from which risk metrics are calculated.
+
+Key metrics include:
+
+Mean Expected Loss
+95% Value at Risk (VaR)
+99% Value at Risk (VaR)
+Scenario-specific loss estimates
+
+These measures help identify tail-risk events that may have a low probability but significant financial consequences.
+4. LLM-Based Decision Support
+
+A reasoning layer powered by Llama 3.3 (via Groq inference) analyzes simulation results and generates scenario-specific recommendations.
+
+Examples include:
+
+Inventory buffer adjustments
+Logistics rerouting strategies
+Air freight substitution decisions
+Supply chain contingency planning
+
+The LLM does not perform the risk calculations themselves. Instead, it interprets the quantitative outputs generated by the simulation engine.
+
+Key Features
+Multi-Scenario Stress Testing
+
+Evaluate outcomes across multiple disruption scenarios:
+
+Minor Port Congestion
+Major Chokepoint Blockage
+Severe Maritime Failure
+Tail-Risk Analysis
+
+Quantifies high-impact, low-probability events through 95% and 99% VaR calculations.
+
+Supply Chain Cost Modeling
+
+Models trade-offs between:
+
+Vessel idling
+Maritime rerouting
+Alternative transportation methods
+AI-Assisted Interpretation
+
+Transforms quantitative simulation outputs into actionable operational recommendations.
+Results
+
+The simulations produced a strongly right-skewed loss distribution.
+
+Key observations:
+
+Most simulations resulted in limited economic impact.
+A small percentage generated disproportionately large losses.
+Extreme disruption scenarios produced substantially higher VaR estimates.
+Loss exposure increased non-linearly as disruption duration expanded.
+
+These findings demonstrate the importance of evaluating uncertainty rather than relying solely on average-case forecasts.
+Visualizations
+Monte Carlo Loss Distribution
+
+Displays the frequency distribution of simulated economic losses and highlights the long-tail behavior of extreme events.
+
+Value at Risk (VaR)
+
+Shows the 95th and 99th percentile risk thresholds used to estimate downside exposure.
+
+Scenario Comparison
+
+Compares expected losses and risk levels across disruption severities.
+Assumptions and Limitations
+
+This project is intended as an educational and analytical framework rather than a production forecasting system.
+
+Current limitations include:
+
+Simplified rerouting behavior assumptions
+Independent treatment of disruption variables
+Static trade exposure estimates
+No integration with live shipping or logistics feeds
+Limited geopolitical event modeling
+
+Future versions could incorporate real-time logistics data, dynamic trade flows, and network-based supply chain modeling.
+Technology Stack
+Python
+NumPy
+Pandas
+Plotly
+Groq API
+Llama 3.3
+Google Colab
+GitHub
+Future Improvements
+Real-time maritime data integration
+Network graph analysis of trade routes
+Dynamic disruption probability estimation
+Enhanced sensitivity analysis
+Interactive web deployment
 
 📂 Repository Structure notebooks/: The core Google Colab logic and Monte Carlo engine. data/: Cleaned global trade datasets and disruption parameters. assets/: Professional Plotly histograms showing the Risk Distribution
 
@@ -26,9 +158,9 @@ Key insights: VaR 95 increases sharply with the severity of the disruption scena
 
 <img width="1920" height="929" alt="Screenshot 349" src="https://github.com/user-attachments/assets/802a966a-9d43-497b-bc74-5174f2f23be6" />
 Graph: Global Trade Disruption Risk by Scenario 
-What it shows: This bar chart compares average expected economic losses (in billions USD) across three scenarios: Minor Port Congestion, Major Suez Canal Blockage, and Total Maritime Chokepoint Failure.
-Key insights: Average losses increase with the severity of the disruption, with Total Maritime Chokepoint Failure representing the highest expected financial impact. This visualization makes it easy to compare the typical costs associated with each type of event.
+What it shows: Distribution of simulated economic losses across 10,000 disruption scenarios.
 
+Key insight: Most scenarios produce limited losses, but a small number generate extreme financial impacts, creating a pronounced right tail.
 
 <img width="571" height="455" alt="download" src="https://github.com/user-attachments/assets/5aa490c3-01c8-4c5a-82d7-c34b0e08ba10" />
 Graph: Monte Carlo Loss Distribution 
