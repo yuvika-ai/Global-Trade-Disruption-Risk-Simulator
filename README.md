@@ -127,16 +127,7 @@ No integration with live shipping or logistics feeds
 Limited geopolitical event modeling
 
 Future versions could incorporate real-time logistics data, dynamic trade flows, and network-based supply chain modeling.
-Technology Stack
-Python
-NumPy
-Pandas
-Plotly
-Groq API
-Llama 3.3
-Google Colab
-GitHub
-Future Improvements
+
 ## 📈 Visualizations & Insights
 
 ### 1. Tail Risk (VaR Levels)
